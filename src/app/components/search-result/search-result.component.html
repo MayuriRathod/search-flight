@@ -1,0 +1,26 @@
+<div class="search-result">
+	<div class="filter-side">
+		<app-flight-search-form [class]="sidebarClass" (onFlightSearch)="onFlightSearch($event)"></app-flight-search-form>
+	</div>
+	<div class="result-container">
+		<div *ngIf="searchResultPresent">
+			<div class="result-meta">
+				<div class="flight-data">
+					<span> {{flightSearchDetails.originCity}} > {{flightSearchDetails.destinationCity}}</span><span *ngIf="!flightSearchDetails.oneWay"> > {{flightSearchDetails.originCity}} </span>
+				</div>
+
+				<div class="date-data">
+					<div class="depart">Depart : {{flightSearchDetails.startDate}}</div>
+					<div *ngIf="!flightSearchDetails.oneWay" class="return">Return : {{flightDetails.endDate}}</div>
+				</div>
+			</div>
+			<div *ngFor="let flight of flights">
+				<app-flight-card [flightDetails]="flight"></app-flight-card>
+			</div>
+		</div>
+		<div *ngIf="!searchResultPresent">
+			<span *ngIf="flightSearchDetails"> Provide details for the flights you are looking for ..! </span>
+			<span *ngIf="!flightSearchDetails"> Sorry there are not flights available for provided details </span>
+		</div>
+	</div>
+</div>

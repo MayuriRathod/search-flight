@@ -1,0 +1,32 @@
+.filter-side {
+	width: 25%;
+    padding-right: 12px;
+    border-right: 1px solid #aeaed8;
+}
+
+.search-result{
+    display: flex;
+    width: 100%;
+ }
+
+.result-container {
+	width: 75%;
+}
+
+
+.result-meta {
+	display: flex;
+}
+
+.flight-data {
+	font-size: 18px;
+    width: 100%;
+    margin: 20px;
+    width: 50%;
+}
+
+.date-data {
+	margin: 18px;
+    width: 50%;
+    text-align: right;
+}

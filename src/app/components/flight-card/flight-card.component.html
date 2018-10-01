@@ -1,0 +1,77 @@
+<!-- <div class="flight-card">
+	<div class="content-left">
+		<div class="total-amount">Rs 9000</div>
+		<div class="flight-details">
+			<div class="dept-flight">
+				<div class="flight-code">
+					AI90992
+				</div>
+				<div class="way">
+					PUNE > HYD
+				</div>
+				<div class="timing-dept">
+					Depart: 10:00AM
+				</div>
+				<div class="timing-dept">
+					Arrive: 12:00AM
+				</div>
+			</div>
+
+			<div class="return-flight">
+				<div class="flight-code">
+					AI90992
+				</div>
+				<div class="way">
+					PUNE > HYD
+				</div>
+				<div class="timing-dept">
+					Depart: 10:00AM
+				</div>
+				<div class="timing-dept">
+					Arrive: 12:00AM
+				</div>
+			</div>
+		</div>
+
+		<div class="book-my-flight">
+			BOOK FLIGHT
+		</div>
+	</div>
+	<div class="content-right">
+		<div class="flight-logo">
+			<img src="https://i.pinimg.com/originals/49/56/54/495654aed23fde57814473363331fad9.jpg">
+		</div>
+		
+	</div>
+</div> -->
+
+<mat-card>
+	<mat-card-header></mat-card-header>
+	<mat-card-content>
+		<div class="flight-info">
+			<div class="flight-amount">
+				{{flightDetails.totalAmount}}
+			</div>
+			<div class="flight-details">
+				<div class="detail-section start-details">
+					<div class="detail-item flight-id">{{flightDetails.startDetails.flightId}}</div>
+					<div class="detail-item flight-code">{{flightDetails.startDetails.startCode}} > {{flightDetails.startDetails.endCode}}</div>
+					<div class="detail-item depart-time">Depart Time: {{flightDetails.startDetails.departTime}}</div>
+					<div class="detail-item arrive-time">Arrive Time: {{flightDetails.startDetails.arriveTime}}</div>
+				</div>
+				<div class="detail-section end-details">
+					<div class="detail-item flight-id">{{flightDetails.endDetails.flightId}}</div>
+					<div class="detail-item flight-code">{{flightDetails.endDetails.startCode}} > {{flightDetails.endDetails.endCode}}</div>
+					<div class="detail-item depart-time">Depart Time: {{flightDetails.endDetails.departTime}}</div>
+					<div class="detail-item arrive-time">Arrive Time: {{flightDetails.endDetails.arriveTime}}</div>
+				</div>
+			</div>
+		</div>
+		<div class="flight-actions">
+			<img mat-card-image src="https://i.pinimg.com/originals/49/56/54/495654aed23fde57814473363331fad9.jpg">
+			<mat-card-actions>
+					<button mat-button>Book Ticket</button>
+			</mat-card-actions>
+		</div>
+	</mat-card-content>
+</mat-card>

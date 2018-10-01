@@ -1,0 +1,64 @@
+.ico-newHeaderLogo {
+    height: 39.5px;
+    width: 110px;
+    display: inline-block;
+    background: url(//www.yatra.com/content/fresco/beetle/images/newIcons/yatra_logo.svg) 50% no-repeat;
+    background-size: 110px 39.5px;
+}
+
+.header-container {
+    background-color: #fff;
+    width: 100%;
+    border-bottom: 1px solid #e5e5e5;
+    z-index: auto;
+    display: inline-flex;
+    width: 100%;
+    height: 45px;
+    margin: 0 auto;
+}
+
+.menu {
+    width: 85%;
+    /* float: right; */
+    /* position: relative; */
+    top: 4px;
+    /* line-height: 45px; */
+}
+
+.settings {
+    /* float: right!important; */
+    margin-right: 30px;
+    /* height: 45px; */
+    /* line-height: 45px; */
+}
+.settings #userLoginBlock {
+    float: left;
+    margin-right: 3px;
+}
+
+.settings-content {
+    position: relative;
+    display: inline-block;
+    padding-left: 0;
+    position: relative;
+    display: inline-block;
+    padding-left: 0;
+    top: 0;
+    position: relative;
+    /* float: right; */
+    padding: 0;
+    margin: auto;
+}
+.list-dropdown>a {
+    display: block;
+    padding: 10px 15px 18px;
+    position: relative;
+}
+li{
+    display: inline-block;
+    /* padding-bottom: 16px; */
+}
+
+.list-dropdown>a {
+    color: #333;
+}

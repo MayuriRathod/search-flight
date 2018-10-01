@@ -1,0 +1,49 @@
+<div class="flight-container" [class]="class">
+	<section class="heading">
+		<div class="tabs">
+			<label (click)="oneWay=true" [ngClass]="{'selected': oneWay}"> One Way </label>
+			<label (click)="oneWay=false" [ngClass]="{'selected': !oneWay}"> Round Trip </label>
+		</div>
+		<mat-divider></mat-divider>
+	</section>
+
+
+	<form [formGroup]="flightForm">
+		<mat-form-field>
+			<mat-select placeholder="Origin City" formControlName="originCity">
+				<mat-option *ngFor="let city of cities" [value]="city">{{city}}</mat-option>
+			</mat-select>
+			<mat-error>Please select origin city</mat-error>
+		</mat-form-field>
+		<mat-form-field>
+			<mat-select placeholder="Destination City" formControlName="destinationCity">
+				<mat-option *ngFor="let city of cities" [value]="city">{{city}}</mat-option>
+			</mat-select>
+			<mat-error>Please select destination city</mat-error>
+		</mat-form-field>
+
+		<mat-form-field>
+			<input matInput [matDatepicker]="startDate" placeholder="Start Date"
+			 formControlName="startDate" readonly>
+			 <mat-datepicker-toggle matSuffix [for]="startDate"></mat-datepicker-toggle>
+			<mat-datepicker required #startDate></mat-datepicker>
+			<mat-error *ngIf="startDate.errors && startDate.errors.required">Please provide Start Date</mat-error>
+		</mat-form-field>
+
+		<mat-form-field *ngIf="!oneWay">
+			<input matInput [required]="!oneWay" [min]="flightForm.value.startDate" [matDatepicker]="endDate" placeholder="End Date"
+			 formControlName="endDate" readonly>
+			 <mat-datepicker-toggle matSuffix [for]="endDate"></mat-datepicker-toggle>
+			<mat-datepicker required #endDate></mat-datepicker>
+			<mat-error *ngIf="endDate.errors && endDate.errors.required">Please provide End Date</mat-error>
+		</mat-form-field>
+		
+		<mat-form-field>
+			<mat-select placeholder="No of Passengers" formControlName="Passengers">
+				<mat-option *ngFor="let count of passengers" [value]="count">{{count}}</mat-option>
+			</mat-select>
+		</mat-form-field>
+
+		<button mat-button (click)="searchFlights()">Search</button>
+	</form>
+</div>

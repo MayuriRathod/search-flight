@@ -1,0 +1,104 @@
+
+mat-card-content {
+	display: flex;
+}
+
+mat-card {
+	margin: 1em;
+}
+
+.flight-info {
+	float: left;
+	width: 80%;
+	.flight-details {
+		display: flex;
+		flex-direction: row;
+		width: 100%;
+		.detail-section {
+			width: 50%;
+		}
+		.start-details {
+			float: left;
+		}
+		.end-details {
+			float: right;
+		}
+		.detail-item {
+			padding-top: 15px;
+		}
+	}
+	
+}
+
+.flight-actions {
+	float: right;
+	width: 20%;
+	display: flex;
+	flex-direction: column;
+	img {
+		height: 70%;
+	}
+	button {
+		width: 100%;
+		height: 30%;
+	}
+}
+
+// .content-right {
+// 	width: 50%;
+//     margin-top: 20px;
+//     text-align: center;
+
+//     img {
+//     	width: 200px;
+//     }
+// }
+
+// .book-my-flight {
+// 	height: 34px;
+//     font-size: 16px;
+//     border: 1px solid;
+//     width: 150px;
+//     background-color: #eb2026;
+//     border-color: #bc0006;
+//     width: 150px;
+//     text-align: center;
+//     text-transform: uppercase;
+//     line-height: 34px;
+//     cursor: pointer;
+// }
+
+// .flight-card {
+// 	margin: 3%;
+// 	display: flex;
+// 	padding-bottom: 10px;
+// 	border: 1px solid;
+
+// 	.content-left {
+// 		width: 50%;
+// 		margin-left: 2%;
+
+// 		.total-amount {
+// 			font-size: 19px;
+// 		    font-weight: bold;
+// 		    color: #c197e8;
+// 		}
+
+// 		.flight-details {
+// 			display: flex;
+// 			margin-top : 10px;
+// 			.dept-flight {
+// 				width: 50%;
+// 			}
+
+// 			.way {
+// 				margin: 6px 0px;
+//     			font-size: 16px;
+// 			}
+// 		}
+
+// 		.timing-dept {
+// 			margin: 4px 0px;
+// 		}
+// 	}
+// }

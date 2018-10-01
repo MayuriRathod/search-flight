@@ -1,0 +1,9 @@
+{
+    "cities": {
+        "Delhi": "DEL",
+        "Hyderabad": "HYD",
+        "Mumbai": "MUM",
+        "Bangalore": "BNQ",
+        "Pune": "PNQ"
+    }
+}

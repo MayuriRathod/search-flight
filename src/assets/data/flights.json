@@ -1,0 +1,20 @@
+{
+    "flightData": [
+        {
+            "flightId": "AI202",
+            "origin": "Pune",
+            "destination": "Delhi",
+            "departTime": "10.00 AM",
+            "arriveTime": "12.56 PM",
+            "amount": 1000
+        },
+        {
+            "flightId": "AI201",
+            "origin": "Delhi",
+            "destination": "Pune",
+            "departTime": "8.10 AM",
+            "arriveTime": "10.15 AM",
+            "amount": 1000
+        }
+    ]
+}
